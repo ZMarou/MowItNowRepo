@@ -10,7 +10,7 @@
 
 	<properties>
 		<spring.version>4.0.1.RELEASE</spring.version>
-		<junit.version>3.8.1</junit.version>
+		<junit.version>4.11</junit.version>
 	</properties>
 
 	<dependencies>
@@ -38,8 +38,15 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<finalName>MowItNowProject</finalName>
 		<plugins>
