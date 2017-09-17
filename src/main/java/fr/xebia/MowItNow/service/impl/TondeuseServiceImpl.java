@@ -26,13 +26,13 @@ public class TondeuseServiceImpl implements TondeuseService {
 	@Autowired
 	private DataService dataService;
 
-	
+	@SuppressWarnings("unchecked")
 	public List<Tondeuse> moveTondeuses(String filePath) throws IOException, IllegalInstructionException {
 		log.info("Start TondeuseServiceImpl.moveTondeuse");
-		List<Tondeuse> tondeuses = new ArrayList<>();
-		List<Instruction> instructions = new ArrayList<>();
-		Pelouse pelouse = null;
-		extractData(filePath, tondeuses, instructions, pelouse);
+		Map<String, Object> data = dataService.readDataFomFile(filePath);
+		List<Tondeuse> tondeuses = (ArrayList<Tondeuse>) data.get(ParamConstant.TONDEUSE_COORDINATES_ENTRY);
+		List<Instruction> instructions = (ArrayList<Instruction>) data.get(ParamConstant.TONDEUSE_INSTRUCTIONS_ENTRY);
+		Pelouse pelouse = (Pelouse) data.get(ParamConstant.PELOUSE_DIMENSIONS_ENTRY);
 		for (int i = 0; i < tondeuses.size(); i++) {
 			String instruction = instructions.get(i).getInstruction();
 			Tondeuse tondeuse = tondeuses.get(i);
@@ -44,19 +44,13 @@ public class TondeuseServiceImpl implements TondeuseService {
 
 	private void runInstruction(Pelouse pelouse, String instruction, Tondeuse tondeuse)
 			throws IllegalInstructionException {
+		log.info("Tondeuse position: " + tondeuse.toString());
 		for (int j = 0; j < instruction.length(); j++) {
 			char order = instruction.charAt(j);
+			log.info("New order: " + order);
 			runOrder(pelouse, tondeuse, order);
 			log.info("New tondeuse position:" + tondeuse.toString());
 		}
-	}
-
-	@SuppressWarnings("unchecked")
-	private void extractData(String filePath, List<Tondeuse> tondeuses, List<Instruction> instructions, Pelouse pelouse) throws IOException {
-		Map<String, Object> data = dataService.readDataFomFile(filePath);
-		tondeuses = (ArrayList<Tondeuse>) data.get(ParamConstant.TONDEUSE_COORDINATES_ENTRY);
-		instructions = (ArrayList<Instruction>) data.get(ParamConstant.TONDEUSE_INSTRUCTIONS_ENTRY);
-		pelouse = (Pelouse) data.get(ParamConstant.PELOUSE_DIMENSIONS_ENTRY);
 	}
 
 	private void runOrder(Pelouse pelouse, Tondeuse tondeuse, char order) throws IllegalInstructionException {
@@ -72,8 +66,7 @@ public class TondeuseServiceImpl implements TondeuseService {
 				calculateNewPosition(tondeuse);
 				break;
 			default:
-				throw new IllegalInstructionException(
-						"The instrction " + order + " is not valid !!");
+				throw new IllegalInstructionException("The instrction " + order + " is not valid !!");
 			}
 		}
 	}
@@ -81,18 +74,25 @@ public class TondeuseServiceImpl implements TondeuseService {
 	private void calculateNewPosition(Tondeuse tondeuse) {
 		switch (tondeuse.getDirection()) {
 		case 'N':
-			tondeuse.setY(tondeuse.getY() - 1);
+			tondeuse.setY(tondeuse.getY() + 1);
+			break;
 		case 'E':
 			tondeuse.setX(tondeuse.getX() + 1);
+			break;
 		case 'W':
 			tondeuse.setX(tondeuse.getX() - 1);
+			break;
 		case 'S':
-			tondeuse.setY(tondeuse.getY() + 1);
+			tondeuse.setY(tondeuse.getY() - 1);
+			break;
+		default:
+			break;
 		}
 	}
 
 	private boolean isTendenseOutsidePelouse(Pelouse pelouse, Tondeuse tondeuse) {
-		return tondeuse.getX() > pelouse.getLength() || tondeuse.getY() > pelouse.getWidth();
+		return tondeuse.getX() > pelouse.getLength() || tondeuse.getX() < 0 || tondeuse.getY() > pelouse.getWidth()
+				|| tondeuse.getY() < 0;
 	}
 
 	private Character turnRight(char direction) {

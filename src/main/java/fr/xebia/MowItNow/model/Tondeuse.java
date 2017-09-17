@@ -73,6 +73,8 @@ public class Tondeuse {
 		return "Tondeuse [x=" + x + ", y=" + y + ", direction=" + direction + "]";
 	}
 	
-	
+	public String toReturn() {
+		return x+" "+y+" "+direction+"\n";
+	}
 
 }
