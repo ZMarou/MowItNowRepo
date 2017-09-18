@@ -13,7 +13,7 @@ Concepts utilisés:
 - les streams pour les collections et les fichiers
 - les expressions lambda
 - BDD / TDD 
-- Spring Framwork
+- Spring Framework
 - Les patrons de conception: facade, IoC, MVC, Singleton, ...
 - Configuration par annotation
 - Personnalisation des exceptions
