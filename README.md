@@ -7,7 +7,7 @@ Prérequis:
 
 Utilisation:
 lancer l'url suivant http://localhost:8080/MowItNowProject/run?path={path_file_encodé}
-exemple :http://localhost:8080/MowItNowProject/run?path=C%3A%5CFileMocks.txt
+Exemple: http://localhost:8080/MowItNowProject/run?path=C%3A%5CFileMocks.txt
 
 Concepts utilisés:
 - les streams pour les collections et les fichiers
