@@ -57,10 +57,10 @@ public class TondeuseServiceImpl implements TondeuseService {
 		if (!isTendenseOutsidePelouse(pelouse, tondeuse)) {
 			switch (order) {
 			case 'G':
-				tondeuse.setDirection(turnLeft(tondeuse.getDirection()));
+				tondeuse.setDirection(turn(tondeuse.getDirection(), order));
 				break;
 			case 'D':
-				tondeuse.setDirection(turnRight(tondeuse.getDirection()));
+				tondeuse.setDirection(turn(tondeuse.getDirection(), order));
 				break;
 			case 'A':
 				calculateNewPosition(tondeuse);
@@ -95,31 +95,16 @@ public class TondeuseServiceImpl implements TondeuseService {
 				|| tondeuse.getY() < 0;
 	}
 
-	private Character turnRight(char direction) {
+	private Character turn(char direction, char order) {
 		switch (direction) {
 		case 'N':
-			return DirectionEnum.EST.getDirection();
+			return order == 'D' ? DirectionEnum.EST.getDirection() : DirectionEnum.OUEST.getDirection();
 		case 'E':
-			return DirectionEnum.SUD.getDirection();
+			return order == 'D' ? DirectionEnum.SUD.getDirection() : DirectionEnum.NORD.getDirection();
 		case 'W':
-			return DirectionEnum.NORD.getDirection();
+			return order == 'D' ? DirectionEnum.NORD.getDirection() : DirectionEnum.SUD.getDirection();
 		case 'S':
-			return DirectionEnum.OUEST.getDirection();
-		default:
-			return null;
-		}
-	}
-
-	private Character turnLeft(char direction) {
-		switch (direction) {
-		case 'N':
-			return DirectionEnum.OUEST.getDirection();
-		case 'E':
-			return DirectionEnum.NORD.getDirection();
-		case 'W':
-			return DirectionEnum.SUD.getDirection();
-		case 'S':
-			return DirectionEnum.EST.getDirection();
+			return order == 'D' ? DirectionEnum.OUEST.getDirection() : DirectionEnum.EST.getDirection();
 		default:
 			return null;
 		}

@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,8 +23,8 @@ public class TondeuseServiceWS {
 	@Autowired
 	private TondeuseService tondeuseService;
 
-	@PostMapping("/run")
-	public ResponseEntity<String> moveTondeuses(@RequestParam(value="Pathfile", required=true) String pathFile) {
+	@GetMapping("/run")
+	public ResponseEntity<String> moveTondeuses(@RequestParam(value="path", required=true) String pathFile) {
 		log.info("Start TondeuseServiceWS.moveTondeuses");
 		try {
 			List<Tondeuse> tondeuses = tondeuseService.moveTondeuses(pathFile);
@@ -46,7 +46,7 @@ public class TondeuseServiceWS {
 	private String formatResult(List<Tondeuse> tondeuses) {
 		String result ="";
 		for (Tondeuse tondeuse : tondeuses) {
-			result.concat(tondeuse.toReturn());
+			result = result.concat(tondeuse.toReturn());
 		}
 		return result;
 	}
