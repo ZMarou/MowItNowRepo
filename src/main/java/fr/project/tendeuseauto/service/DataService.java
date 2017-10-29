@@ -1,4 +1,4 @@
-package fr.xebia.MowItNow.service;
+package fr.project.tendeuseauto.service;
 
 import java.io.IOException;
 import java.util.Map;

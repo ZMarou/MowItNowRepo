@@ -1,4 +1,4 @@
-package fr.xebia.MowItNow.enums;
+package fr.project.tendeuseauto.enums;
 
 public enum DirectionEnum {
 	NORD('N'), EST('E'), OUEST('W'), SUD('S');

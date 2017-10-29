@@ -1,4 +1,4 @@
-package fr.xebia.MowItNow.model;
+package fr.project.tendeuseauto.model;
 
 public class Instruction {
 

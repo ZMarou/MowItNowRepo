@@ -1,4 +1,4 @@
-package fr.xebia.MowItNow.exception;
+package fr.project.tendeuseauto.exception;
 
 public class IllegalInstructionException extends Exception{
 

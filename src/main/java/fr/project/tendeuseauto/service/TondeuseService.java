@@ -1,10 +1,10 @@
-package fr.xebia.MowItNow.service;
+package fr.project.tendeuseauto.service;
 
 import java.io.IOException;
 import java.util.List;
 
-import fr.xebia.MowItNow.exception.IllegalInstructionException;
-import fr.xebia.MowItNow.model.Tondeuse;
+import fr.project.tendeuseauto.exception.IllegalInstructionException;
+import fr.project.tendeuseauto.model.Tondeuse;
 
 public interface TondeuseService {
 

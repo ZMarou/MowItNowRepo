@@ -1,4 +1,4 @@
-package fr.xebia.MowItNow.config;
+package fr.project.tendeuseauto.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

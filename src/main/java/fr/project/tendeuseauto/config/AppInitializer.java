@@ -1,4 +1,4 @@
-package fr.xebia.MowItNow.config;
+package fr.project.tendeuseauto.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

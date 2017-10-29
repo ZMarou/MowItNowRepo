@@ -1,4 +1,4 @@
-package fr.xebia.MowItNow.web;
+package fr.project.tendeuseauto.web;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.xebia.MowItNow.exception.IllegalInstructionException;
-import fr.xebia.MowItNow.model.Tondeuse;
-import fr.xebia.MowItNow.service.TondeuseService;
+import fr.project.tendeuseauto.exception.IllegalInstructionException;
+import fr.project.tendeuseauto.model.Tondeuse;
+import fr.project.tendeuseauto.service.TondeuseService;
 
 @RestController
 public class TondeuseServiceWS {

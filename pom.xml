@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>fr.xebia</groupId>
-	<artifactId>MowItNowProject</artifactId>
+	<groupId>fr.project</groupId>
+	<artifactId>tendeuseauto</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MowItNowProject Maven Webapp</name>
+	<name>TendeuseAutoProject Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -61,7 +61,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>MowItNowProject</finalName>
+		<finalName>TendeuseAutoProject</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -79,7 +79,7 @@
 					<version>2.4</version>
 					<configuration>
 						<warSourceDirectory>src/main/webapp</warSourceDirectory>
-						<warName>MowItNowProject</warName>
+						<warName>TendeuseAutoProject</warName>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
 					</configuration>
 				</plugin>

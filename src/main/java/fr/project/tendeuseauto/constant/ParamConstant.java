@@ -1,4 +1,4 @@
-package fr.xebia.MowItNow.constant;
+package fr.project.tendeuseauto.constant;
 
 public final class ParamConstant {
 

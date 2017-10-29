@@ -1,4 +1,4 @@
-package fr.xebia.MowItNow.service.impl;
+package fr.project.tendeuseauto.service.impl;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,14 +9,14 @@ import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fr.xebia.MowItNow.constant.ParamConstant;
-import fr.xebia.MowItNow.enums.DirectionEnum;
-import fr.xebia.MowItNow.exception.IllegalInstructionException;
-import fr.xebia.MowItNow.model.Instruction;
-import fr.xebia.MowItNow.model.Pelouse;
-import fr.xebia.MowItNow.model.Tondeuse;
-import fr.xebia.MowItNow.service.DataService;
-import fr.xebia.MowItNow.service.TondeuseService;
+import fr.project.tendeuseauto.constant.ParamConstant;
+import fr.project.tendeuseauto.enums.DirectionEnum;
+import fr.project.tendeuseauto.exception.IllegalInstructionException;
+import fr.project.tendeuseauto.model.Instruction;
+import fr.project.tendeuseauto.model.Pelouse;
+import fr.project.tendeuseauto.model.Tondeuse;
+import fr.project.tendeuseauto.service.DataService;
+import fr.project.tendeuseauto.service.TondeuseService;
 
 @Service
 public class TondeuseServiceImpl implements TondeuseService {
