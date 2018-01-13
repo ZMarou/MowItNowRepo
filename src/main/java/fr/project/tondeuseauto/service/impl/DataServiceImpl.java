@@ -1,4 +1,4 @@
-package fr.project.tendeuseauto.service.impl;
+package fr.project.tondeuseauto.service.impl;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,11 +14,11 @@ import java.util.stream.Stream;
 
 import org.springframework.stereotype.Service;
 
-import fr.project.tendeuseauto.constant.ParamConstant;
-import fr.project.tendeuseauto.model.Instruction;
-import fr.project.tendeuseauto.model.Pelouse;
-import fr.project.tendeuseauto.model.Tondeuse;
-import fr.project.tendeuseauto.service.DataService;
+import fr.project.tondeuseauto.constant.ParamConstant;
+import fr.project.tondeuseauto.model.Instruction;
+import fr.project.tondeuseauto.model.Pelouse;
+import fr.project.tondeuseauto.model.Tondeuse;
+import fr.project.tondeuseauto.service.DataService;
 
 @Service
 public class DataServiceImpl implements DataService {

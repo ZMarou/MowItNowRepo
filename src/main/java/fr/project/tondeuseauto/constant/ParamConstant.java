@@ -1,4 +1,4 @@
-package fr.project.tendeuseauto.constant;
+package fr.project.tondeuseauto.constant;
 
 public final class ParamConstant {
 

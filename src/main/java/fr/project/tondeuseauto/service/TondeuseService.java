@@ -1,10 +1,10 @@
-package fr.project.tendeuseauto.service;
+package fr.project.tondeuseauto.service;
 
 import java.io.IOException;
 import java.util.List;
 
-import fr.project.tendeuseauto.exception.IllegalInstructionException;
-import fr.project.tendeuseauto.model.Tondeuse;
+import fr.project.tondeuseauto.exception.IllegalInstructionException;
+import fr.project.tondeuseauto.model.Tondeuse;
 
 public interface TondeuseService {
 

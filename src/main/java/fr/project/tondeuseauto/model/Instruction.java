@@ -1,4 +1,4 @@
-package fr.project.tendeuseauto.model;
+package fr.project.tondeuseauto.model;
 
 public class Instruction {
 

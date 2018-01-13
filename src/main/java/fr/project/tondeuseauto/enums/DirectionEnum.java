@@ -1,4 +1,4 @@
-package fr.project.tendeuseauto.enums;
+package fr.project.tondeuseauto.enums;
 
 public enum DirectionEnum {
 	NORD('N'), EST('E'), OUEST('W'), SUD('S');

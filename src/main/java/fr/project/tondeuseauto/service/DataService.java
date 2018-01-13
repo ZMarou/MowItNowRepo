@@ -1,4 +1,4 @@
-package fr.project.tendeuseauto.service;
+package fr.project.tondeuseauto.service;
 
 import java.io.IOException;
 import java.util.Map;

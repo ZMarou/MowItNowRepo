@@ -1,4 +1,4 @@
-package fr.project.tendeuseauto.exception;
+package fr.project.tondeuseauto.exception;
 
 public class IllegalInstructionException extends Exception{
 

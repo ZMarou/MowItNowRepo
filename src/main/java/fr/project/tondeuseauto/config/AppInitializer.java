@@ -1,4 +1,4 @@
-package fr.project.tendeuseauto.config;
+package fr.project.tondeuseauto.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

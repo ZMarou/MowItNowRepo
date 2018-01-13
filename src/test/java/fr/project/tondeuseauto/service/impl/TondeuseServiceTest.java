@@ -1,4 +1,4 @@
-package fr.xebia.MowItNow.service.impl;
+package fr.project.tondeuseauto.service.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -19,14 +19,14 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import fr.project.tendeuseauto.constant.ParamConstant;
-import fr.project.tendeuseauto.exception.IllegalInstructionException;
-import fr.project.tendeuseauto.model.Instruction;
-import fr.project.tendeuseauto.model.Pelouse;
-import fr.project.tendeuseauto.model.Tondeuse;
-import fr.project.tendeuseauto.service.DataService;
-import fr.project.tendeuseauto.service.TondeuseService;
-import fr.xebia.MowItNow.service.AbstractServiceTest;
+import fr.project.tondeuseauto.constant.ParamConstant;
+import fr.project.tondeuseauto.exception.IllegalInstructionException;
+import fr.project.tondeuseauto.model.Instruction;
+import fr.project.tondeuseauto.model.Pelouse;
+import fr.project.tondeuseauto.model.Tondeuse;
+import fr.project.tondeuseauto.service.AbstractServiceTest;
+import fr.project.tondeuseauto.service.DataService;
+import fr.project.tondeuseauto.service.TondeuseService;
 
 public class TondeuseServiceTest extends AbstractServiceTest {
 

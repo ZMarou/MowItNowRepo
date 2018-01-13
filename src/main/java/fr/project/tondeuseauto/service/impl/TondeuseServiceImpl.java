@@ -1,4 +1,4 @@
-package fr.project.tendeuseauto.service.impl;
+package fr.project.tondeuseauto.service.impl;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,14 +9,14 @@ import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fr.project.tendeuseauto.constant.ParamConstant;
-import fr.project.tendeuseauto.enums.DirectionEnum;
-import fr.project.tendeuseauto.exception.IllegalInstructionException;
-import fr.project.tendeuseauto.model.Instruction;
-import fr.project.tendeuseauto.model.Pelouse;
-import fr.project.tendeuseauto.model.Tondeuse;
-import fr.project.tendeuseauto.service.DataService;
-import fr.project.tendeuseauto.service.TondeuseService;
+import fr.project.tondeuseauto.constant.ParamConstant;
+import fr.project.tondeuseauto.enums.DirectionEnum;
+import fr.project.tondeuseauto.exception.IllegalInstructionException;
+import fr.project.tondeuseauto.model.Instruction;
+import fr.project.tondeuseauto.model.Pelouse;
+import fr.project.tondeuseauto.model.Tondeuse;
+import fr.project.tondeuseauto.service.DataService;
+import fr.project.tondeuseauto.service.TondeuseService;
 
 @Service
 public class TondeuseServiceImpl implements TondeuseService {

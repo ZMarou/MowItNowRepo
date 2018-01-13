@@ -1,4 +1,4 @@
-package fr.project.tendeuseauto.web;
+package fr.project.tondeuseauto.web;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.project.tendeuseauto.exception.IllegalInstructionException;
-import fr.project.tendeuseauto.model.Tondeuse;
-import fr.project.tendeuseauto.service.TondeuseService;
+import fr.project.tondeuseauto.exception.IllegalInstructionException;
+import fr.project.tondeuseauto.model.Tondeuse;
+import fr.project.tondeuseauto.service.TondeuseService;
 
 @RestController
 public class TondeuseServiceWS {
